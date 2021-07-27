@@ -1,4 +1,5 @@
 ﻿using ByteBank.Employes;
+using ByteBank.Systems;
 using System;
 
 namespace ByteBank
@@ -8,8 +9,22 @@ namespace ByteBank
         static void Main(string[] args)
         {
 
-            CalculateBonifications();
+            UseSystem();
 
+        }
+
+        public static void UseSystem()
+        {
+            var sarah = new Director("222.333.444-98", 20000);
+            sarah.Name = "Sarah Felix";
+
+            var victor = new AccountManager("222.333.444-98", 20000);
+            victor.Name = "Victor Wooten";
+
+            var system = new InternalSystem();
+
+            system.Login(sarah, "123");
+            system.Login(victor, "123");
         }
 
         public static void CalculateBonifications()

@@ -1,4 +1,6 @@
-﻿namespace ByteBank.Employes
+﻿using System;
+
+namespace ByteBank.Employes
 {
     abstract class Employe
     {
@@ -6,6 +8,7 @@
 
         public string Name { get; set; }
         private string CPF { get; set; }
+
         public double Salary { get; protected set; }
 
         public Employe(string cpf,double salary)
