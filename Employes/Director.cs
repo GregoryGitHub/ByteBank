@@ -2,7 +2,7 @@
 
 namespace ByteBank.Employes
 {
-    class Director: Authenticable
+    public class Director: AuthenticableEmploye
     {
         
         public Director(string cpf,double salary=5000):base(cpf, salary)

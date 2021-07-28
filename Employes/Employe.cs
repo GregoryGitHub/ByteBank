@@ -2,7 +2,7 @@
 
 namespace ByteBank.Employes
 {
-    abstract class Employe
+    public abstract class Employe
     {
         public static int TotalOfEmployes { get; private set; }
 

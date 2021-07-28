@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using ByteBank.Systems;
 
 namespace ByteBank.Employes
 {
-    class AccountManager : Authenticable
+    class AccountManager : AuthenticableEmploye
     {
         
         public AccountManager(string cpf, double salary=4000): base(cpf,salary)

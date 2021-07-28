@@ -21,10 +21,17 @@ namespace ByteBank
             var victor = new AccountManager("222.333.444-98", 20000);
             victor.Name = "Victor Wooten";
 
+            var peter = new CommercialPartner("Peter");
+            peter.Password = "3344";
+
+            var jonh = new Designer("21312");
+            jonh.Name = "jonh";
+
             var system = new InternalSystem();
 
+            system.Login(peter, "3344");
             system.Login(sarah, "123");
-            system.Login(victor, "123");
+            system.Login(victor, "1234");
         }
 
         public static void CalculateBonifications()

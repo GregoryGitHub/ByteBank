@@ -1,21 +1,21 @@
-﻿using ByteBank.Employes;
+﻿
 using System;
 
 namespace ByteBank.Systems
 {
     class InternalSystem
     {
-        public bool Login(Authenticable employe, string password)
+        public bool Login(IAuthenticable authenticable, string password)
         {
-            bool userAuthenticated = employe.Authenticate(password);
+            bool userAuthenticated = authenticable.Authenticate(password);
 
             if (userAuthenticated)
             {
-                Console.WriteLine("Welcome '{0}' to Internal System of ByteBank",employe.Name);
+                Console.WriteLine("Welcome '{0}' to Internal System of ByteBank", authenticable.getName());
                 return true;
             }else
             {
-                Console.WriteLine("Invalid Credentials for employe '{0}'", employe.Name);
+                Console.WriteLine("Invalid Credentials for employe '{0}'", authenticable.getName());
             }
             return false;
         }
